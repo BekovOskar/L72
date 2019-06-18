@@ -1,54 +1,21 @@
-package com.bekov.publisherapi;
+package com.bekov.feign;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-
-@Entity
 public class Publisher {
 
-	@Id
-	@GeneratedValue
-	private int id;
-	
-	@Column(name = "amazon_revenue")
-	private String amazonRevenue;
-	
-	@Column(name = "author_revenue")
-	private String authorRevenue;
-	
-	@Column(name = "average_rating")
-	private String averageRating;
-	
-	@Column(name = "genre")
-	private String genre;
 
-	@Column(name = "gross_sales")
+	private int id;
+	private String amazonRevenue;
+	private String authorRevenue;
+	private String averageRating;
+	private String genre;
 	private String grossSales;
-	
-	@Column(name = "name")
 	private String name;
-	
-	@Column(name = "publisher_revenue")
 	private String publisherRevenue;
-	
-	@Column(name = "sale_price")
 	private String salePrice;
-	
-	@Column(name = "sales_rank")
 	private String salesRank;
-	
-	@Column(name = "sold_by")
 	private String soldBy;
-	
-	@Column(name = "total_reviews")
 	private String totalReviews;
-	
-	@Column(name = "type")
 	private String type;
-	
-	@Column(name = "units_sold")
 	private String unitsSold;
 
 	public int getId() {
@@ -164,8 +131,8 @@ public class Publisher {
 	}
 
 	public Publisher(String amazonRevenue, String authorRevenue, String averageRating, String genre, String grossSales,
-			String name, String publisherRevenue, String salePrice, String salesRank, String soldBy,
-			String totalReviews, String type, String unitsSold) {
+                     String name, String publisherRevenue, String salePrice, String salesRank, String soldBy,
+                     String totalReviews, String type, String unitsSold) {
 		super();
 		this.amazonRevenue = amazonRevenue;
 		this.authorRevenue = authorRevenue;
@@ -186,5 +153,5 @@ public class Publisher {
 		super();
 	}
 
-	
+
 }

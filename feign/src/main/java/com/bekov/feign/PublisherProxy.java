@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient("publisher_api")
+@FeignClient("publisherApi")
 public interface PublisherProxy {
 
     @GetMapping("/init")
