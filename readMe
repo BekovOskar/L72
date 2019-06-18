@@ -1,0 +1,32 @@
+task 1:
+spring.application.name=naming-server
+server.port=8761
+http://localhost:8761/
+
+spring.application.name=config-server
+server.port=8888
+
+task 2:
+spring.application.name=publisher-api
+server.port=9090
+http://localhost:9090/h2-console
+http://localhost:9090/init
+http://localhost:9090/publisher
+http://localhost:9090/publisher/1
+
+task 3:
+spring.application.name=publisher-feign
+server.port=9091
+http://localhost:9091/publisher/1
+
+task 4:
+spring.application.name=publisher-gateway
+server.port=9092
+http://localhost:9092/publisher-api/publisher/1
+http://localhost:9092/publisher-feign/publisher/1
+
+task 5:
+http://localhost:9411
+
+
+
